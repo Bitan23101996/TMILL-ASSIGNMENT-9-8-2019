@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Sheet</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/datasheet.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	<style>
+	
+	.datasheet{
+		margin-top: 4px;
+	}
+	.datasheet .textVertical {
+		width: 5%;
+	}
+	.datasheet .form-control {
+
+		box-shadow: none;
+		border: 0;
+		border-radius: 0;
+		padding: 3px 6px;
+	}
+
+
+	.datasheet .form-control:focus {
+		border-color: #cccccc;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	.datasheet .table tbody tr td.textInputData {
+		padding: 0;
+	}
+	
+	.datasheet .table tbody tr td {
+		padding: 4px;
+	}
+
+	.datasheet td.textVertical{
+		height: 100%;
+		white-space: nowrap;
+	}
+		
+		
+	.datasheet td.textVertical>div {
+		font-weight: bold;
+		/* font-size: 20px; */
+		transform: translate(17px, 132px) rotate(-90deg);
+		width: 14px;
+	}
+	.datasheet .table-bordered>tbody>tr>td, .datasheet .table-bordered>tbody>tr>th, .datasheet .table-bordered>tfoot>tr>td, 
+	.datasheet .table-bordered>tfoot>tr>th, .datasheet .table-bordered>thead>tr>td, .datasheet .table-bordered>thead>tr>th {
+		border: 1px solid #888;
+	}
+	.datasheet .table>thead:first-child>tr:first-child>th {
+		border-top: 1px solid #888;
+	}
+	</style>
+</head>
+
+<body>
+    <div class="container-fluid datasheet">
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col" class="text-center">25-Jun-2019</th>
+                        <th scope="col" class="text-center">NOTE: SINGAPORE BUNKER PRICE :
+                            IFO 380CST : USD 394.00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td class="textVertical" rowspan="6">
+                            <div><span>Vsl decprptn </span></div>
+                        </td>
+                        <td></td>
+                        <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+
+                        <td>VESSEL NAME / VOYAGE</td>
+
+                        <td class="textInputData">
+                            <input type="text" class="form-control">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>DWT / DFT / LOA</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>GRT / NRT </td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>YEAR OF BUILT / FLAG </td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>GEARS / GRABS /HO/HA</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+
+                    <!--************************-->
+
+                    <tr>
+                        <td class="textVertical" rowspan="8">
+                            <div> <span>T/C</span></div>
+                        </td>
+                        <td>OWNER </td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>LAYCAN ( OWNERS )</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>PERIOD</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>DELIVERY DATE & TIME ( UTC ) </td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>REDELIVERYAREA</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>DAILY HIRE / FRT( ADDCOM+ COMM)</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>SPEED & CONSUMPTION</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+
+                        <td>REDELIVERY BUNKER QTY & CP PRICE</td>
+                        <td class="textInputData"><input type="text" class="form-control"> </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/datasheet.js"></script>
+
+</body>
+
+</html>

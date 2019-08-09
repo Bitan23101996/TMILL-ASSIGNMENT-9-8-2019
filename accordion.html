@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accordion</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+		.panel-right-text{
+			position: absolute;
+			right: 50px;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 11px;
+		    width: 50%;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <div class="panel-accordion">
+
+            <div class="heading active"><span>Option 1</span>
+				<b class="panel-right-text">1 of 10 panel</b>
+                <i class="fa fa-chevron-down icon" aria-hidden="true"></i>
+
+            </div>
+            <div class="item">
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-2">Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Name">
+                        </div>
+                        <label class="control-label col-sm-2">Email:</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" placeholder="Enter email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-2">Age:</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" placeholder="Enter age">
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <button type="button" class="btn btn-primary clickBtn">Click</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="heading active"><span>Option 2</span>
+				<b class="panel-right-text">1 of 10 panel</b>
+                <i class="fa fa-chevron-down icon" aria-hidden="true"></i>
+            </div>
+            <div class="item">
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-2">School Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter School Name">
+                        </div>
+                        <label class="control-label col-sm-2">College Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter College Name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="button" class="btn btn-primary clickBtn">Click</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="heading active"><span>Option 3</span>
+				<b class="panel-right-text">1 of 10 panel</b>
+                <i class="fa fa-chevron-down icon" aria-hidden="true"></i>
+            </div>
+            <div class="item">
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-2">Address Line 1:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Enter Address 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-2">Address Line 2:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Enter Address 2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="button" class="btn btn-primary clickBtn">Click</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="heading"><span>Option 4</span>
+				<b class="panel-right-text">1 of 10 panel</b>
+                <i class="fa fa-chevron-left icon" aria-hidden="true"></i>
+            </div>
+            <div class="hiddenItem item">
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-2">Input 1:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Input 1">
+                        </div>
+                        <label class="control-label col-sm-2">Input 2:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Input 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-2">Input 3:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Input 3">
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <button type="button" class="btn btn-primary clickBtn">Click</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+		$(document).ready(function () {
+			$('.hiddenItem').hide();
+			$('.heading').click(function () {
+				$(this).next('.item').slideToggle(300);
+				$(this).toggleClass("active");
+				$("i", this).toggleClass("fa fa-chevron-down fa fa-chevron-left");
+			})
+
+		});
+	</script>
+
+</body>
+
+</html>

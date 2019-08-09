@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice</title>
+    <!-- Custom fonts for this template-->
+
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+        <h6 class="page-header">Tax Invoice</h6>
+    </div>
+    <div class="container-fluid">
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-text-header">INTERNATIONAL SHIPPING AND LOGISTICS FZE.</p>
+                        <p class="card-text">P.O. BOX 18490</p>
+                        <p class="card-text">EMIRATE: Dubai</p>
+                        <p class="card-text">TRN: 100343048300003</p>
+                        <p class="card-text">E-Mail: accounts@islworld.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body">
+
+                        <p class="card-text">Invoice No.</p>
+                        <input type="text" value="1141" class="form-control" />
+                        <p class="card-text">Buyers Order No.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body">
+
+                        <p class="card-text">Dated</p>
+                        <input type="text" id="datepicker" class="form-control">
+                        <p class="card-text">Dated</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">Buyer</p>
+                        <input type="text" value="Cust3" class="form-control" />
+                        <p class="card-text">Dubai UAE</p>
+                        <p class="card-text">Place of Supply:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Sl No.</th>
+                        <th scope="col">Particulars</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">per</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">VAT Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td style="text-align: center">FRT</td>
+                        <td>1</td>
+                        <td>9.38</td>
+                        <td></td>
+                        <td>
+                            <p>USD</p>
+                            <p>4726300.60</p>
+                        </td>
+                        <td></td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td style="text-align: right">TOTAL</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <p>USD</p>
+                            <p>4726300.60</p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+
+                        <td class="text-right" colspan="7"><span>Total Invoice Amount in AED USD4726300.6 @ AED
+                                3.653/USD =
+                                AED
+                                17265176.09</span></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" class="btn btn-primary">Print</button>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+</body>
+
+</html>

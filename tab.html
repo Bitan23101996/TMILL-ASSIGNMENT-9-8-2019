@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table View With Tabs</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+	<style>
+	#wrapper .panel .panel-heading {
+		padding: 5px 5px 0 5px;
+	}
+
+	#wrapper .panel .nav-tabs {
+		border-bottom: none;
+	}
+
+	/* 
+	#wrapper .panel .nav-justified {
+		margin-bottom: -1px;
+	}
+	 */
+	/**PRIMARY ***/
+
+	#wrapper .panel-primary .nav-tabs>li>a,
+	#wrapper .panel-primary .nav-tabs>li>a:hover,
+	#wrapper .panel-primary .nav-tabs>li>a:focus {
+		color: #fff;
+	}
+
+	#wrapper .panel-primary .nav-tabs>.open>a,
+	#wrapper .panel-primary .nav-tabs>.open>a:hover,
+	#wrapper .panel-primary .nav-tabs>.open>a:focus,
+	#wrapper .panel-primary .nav-tabs>li>a:hover,
+	#wrapper .panel-primary .nav-tabs>li>a:focus {
+		color: #fff;
+		background-color: #3071a9;
+		border-color: transparent;
+	}
+
+	#wrapper .panel-primary .nav-tabs>li.active>a,
+	#wrapper .panel-primary .nav-tabs>li.active>a:hover,
+	#wrapper .panel-primary .nav-tabs>li.active>a:focus {
+		color: #428bca;
+		background-color: #fff;
+		border-color: #428bca;
+		border-bottom-color: transparent;
+	}
+
+
+
+
+	/*********************************ForTable**********************/
+	#wrapper .container-fluid {
+		margin-top: 15px;
+	}
+
+
+	/*Table*/
+	.custom-table {
+		overflow-y: auto;
+		height: 130px;
+		/* margin-top: 5px; */
+	}
+
+	.custom-table table {
+
+		width: 100%;
+
+	}
+
+
+
+	.custom-table thead tr th {
+		position: sticky;
+
+		top: -2px;
+	}
+
+	.custom-table th {
+		background: #eee;
+		padding: 5px 6px;
+		text-align: center;
+
+	}
+
+	.custom-table td {
+		padding: 5px 6px !important;
+	}
+
+
+
+	.addBtnTop {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	</style>
+
+
+</head>
+
+
+<body id="wrapper">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="panel with-nav-tabs panel-primary">
+                    <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+                            <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
+                            <li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane fade in active">
+                                <div class="custom-table">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Col 1</th>
+                                                <th>Col 2</th>
+                                                <th>Col 3</th>
+                                                <th>Col 4</th>
+                                                <th>Col 5</th>
+                                                <th>Col 6</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+
+
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+
+
+
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+
+
+
+
+                                </div>
+                                <!--End of FixedTableHeader-->
+
+                            </div>
+                            <!--End of tab 1-->
+
+
+
+                            <div id="tab2" class="tab-pane fade in">
+                                <div class="custom-table">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Col 1</th>
+                                                <th>Col 2</th>
+                                                <th>Col 3</th>
+
+
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+
+
+
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+
+
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--End of FixedTableHeader-->
+
+                            </div>
+                            <!--End of tab 2-->
+
+
+
+
+                            <div id="tab3" class="tab-pane fade in">
+                                <div class="custom-table">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Col 1</th>
+                                                <th>Col 2</th>
+                                                <th>Col 3</th>
+                                                <th>Col 4</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">4</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">4</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">4</td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tableData">1</td>
+                                                <td class="tableData">2</td>
+                                                <td class="tableData">3</td>
+                                                <td class="tableData">4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--End of FixedTableHeader-->
+
+                            </div>
+                            <!--End of tab 3-->
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>

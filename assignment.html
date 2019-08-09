@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    <style>
+        .wrapper {
+            margin-top: 5px;
+        }
+
+        .wrapper table thead tr {
+            background: rgb(230, 233, 234);
+
+        }
+
+        .wrapper .form-control {
+            box-shadow: none;
+            border: 0;
+            border-radius: 0;
+            padding: 3px 0px;
+            height: 20px;
+        }
+
+        .wrapper .table>tbody>tr>td,
+        .table>tbody>tr>th,
+        .table>tfoot>tr>td,
+        .table>tfoot>tr>th,
+        .table>thead>tr>td,
+        .table>thead>tr>th {
+            padding: 3px !important;
+            padding-left: 3px !important;
+
+        }
+
+        #dataTable1>tbody>tr>td,
+        #dataTable2>tbody>tr>td {
+            border-top: none;
+        }
+
+
+        #dataTable1 tbody tr td:first-child {
+            width: 30%;
+        }
+
+        #dataTable1 tbody tr td {
+            width: 35%;
+        }
+
+
+        #dataTable2 tbody tr td:first-child {
+            width: 40%;
+        }
+
+        #dataTable2 tbody tr td {
+            width: 30%;
+        }
+
+        #dataTable3 .datepicker {
+            text-align: center;
+        }
+
+        #dataTable3>thead>tr>th,
+        #dataTable3>tbody>tr>td {
+            text-align: center;
+        }
+
+        #dataTable3 tbody tr td:first-child {
+            background: rgb(230, 233, 234);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <span>Barane Naree - LOAD PORT</span>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><span>Vessel</span></td>
+                            <td><span>Barane Naree</span></td>
+                            <td><span>Demurrage rate USD $ per day</span></td>
+                            <td><span>8500</span></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><span>B/L Date</span></td>
+                            <td><input type="text" class="form-control datepicker"></td>
+                            <td><span>Despatch Rate USD $ per day</span></td>
+                            <td><span>4250</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>Load Port</span></td>
+                            <td><label>Mina Saqr</label></td>
+                            <td><span>Cargo Qty(M/T)</span></td>
+                            <td>
+                                <input type="text" class="form-control" value="50387">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><span>Discharge Port</span></td>
+                            <td><label>Paradip</label></td>
+                            <td><span>LOADING Rate</span></td>
+                            <td>
+                                <input type="text" class="form-control" value="10000">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>Turn Time(hrs)</span></td>
+                            <td>
+                                <input type="text" class="form-control" value="12">
+                            </td>
+                            <td><span>Time Allowed</span></td>
+                            <td>
+                                <input type="text" class="form-control" value="5.0387">
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
+            <!--dataTable1-->
+            <div class="table-responsive">
+                <table class="table" id="dataTable1">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td><span>Date(mm-dd-yyyy)</span></td>
+                            <td><span>Time (hh-mm)</span></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><span>NOR tendered</span></td>
+                            <td><input type="text" class="datepicker" value="09/07/2019"></td>
+                            <td><input type="text" class="" value="04:30"></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>Commenced Loading</span></td>
+                            <td><input type="text" class="" value="10:07 AM"></td>
+                            <td><input type="text" class="" value="06:25 PM"></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>Completed Loading</span></td>
+                            <td><input type="text" class="datepicker" value="13/07/2019"></td>
+                            <td><input type="text" class="" value="07:20"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+
+            <!--dataTable2-->
+            <div class="table-responsive">
+                <table class="table" id="dataTable2">
+                    <tbody>
+                        <tr>
+                            <td><span>Laytime calculation starts when</span></td>
+                            <td><span>Commenced Loading</span></td>
+                            <td><span>Loading Terms</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>Start Date</span></td>
+                            <td><input type="text" class="datepicker" value="09/07/2019"></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>Start time hrs</span></td>
+                            <td><input type="text" class="" value="17:40"></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>Start time min</span></td>
+                            <td><input type="text" class="" value="18:15"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <!--dataTable3-->
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable3">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th width="15%"><span>Date</span></th>
+                            <th><span>Day</span></th>
+                            <th><span>Start Time</span></th>
+                            <th><span>End Time</span></th>
+                            <th><span>Y/N</span></th>
+                            <th><span>%</span></th>
+                            <th><span>Total Laytime Used</span></th>
+                            <th><span>Remarks</span></th>
+                            <th><span>Laytime used cal</span></th>
+                            <th><span>Time Left</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td width="15%">
+                                <input type="text" class="form-control datepicker" value="10/07/2019">
+                            </td>
+                            <td><span>Wednesday</span></td>
+                            <td><span>00:00</span></td>
+                            <td><span>08:30</span></td>
+                            <td><span>Y</span></td>
+                            <td><span>100</span></td>
+                            <td><span>0.3542</span></td>
+                            <td><span>rem 1</span></td>
+                            <td><span>0.3542</span></td>
+                            <td><span>4.6845</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td width="15%">
+                                <input type="text" class="form-control datepicker" value="10/07/2019">
+                            </td>
+                            <td><span>Wednesday</span></td>
+                            <td><span>08:30</span></td>
+                            <td><span>24:00</span></td>
+                            <td><span>Y</span></td>
+                            <td><span>50</span></td>
+                            <td><span>0.3229</span></td>
+                            <td><span>rem 2</span></td>
+                            <td><span>0.6771</span></td>
+                            <td><span>4.3616</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--End of wrapper class-->
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $('.datepicker').datepicker({
+                dateFormat: 'mm/dd/yy',
+                changeMonth: true,
+                changeYear: true
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

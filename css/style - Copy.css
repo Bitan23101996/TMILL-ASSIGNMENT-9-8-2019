@@ -1,0 +1,216 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-signin {
+  border-radius: 0;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 0;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 0;
+  padding: 10px;
+}
+
+
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.page-heading {
+    letter-spacing: 2px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Newly Added css*/
+
+.page-header{
+	letter-spacing:2px;
+	font-size: 16px;	
+	border-bottom: 1px solid #ccc;
+}
+
+.form-control {
+    margin-bottom: 15px;
+	border: 1px solid #bbb;
+    border-radius: 4px;
+	box-shadow: none;
+}
+.card{
+	border: 1px solid #777;
+	padding: 10px;
+	border-radius: 7px;
+	margin-bottom: 10px;
+    height: 185px;
+/*	box-shadow: 0px 0px 5px #ccc;*/
+}
+.card-text-header{
+	font-size: 16px;	
+	color:#000;
+}
+.card-text{
+	font-size: 15px;	
+	color:#000;
+}
+.table-bordered {
+    border: 1px solid #777;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #777;
+}
+
+.table-bordered>tbody>tr>td{
+	font-size: 15px;	
+}
+
+
+/*Accordion*/
+
+.accordion-menu,
+.accordion-menu ul,
+.accordion-menu li,
+.accordion-menu a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  
+}
+.accordion-menu {
+  width: 100%;
+}
+
+.accordion-menu > ul > li {
+  background: #d7d7d7;
+  text-indent:15px;
+  margin: 5px 0;	
+}
+
+
+.accordion-menu > ul > li:hover {
+  background:#ccc;
+  }
+.accordion-menu > ul > li > a {
+  font-size: 16px;
+  display: block;
+  color: #000;
+	border: 1px solid #003F5C;
+
+}
+.accordion-menu > ul > li > a > span {
+  display: block;
+  padding: 6px 0px;
+}
+.accordion-menu > ul > li > a:hover {
+  text-decoration: none;
+  }
+.accordion-menu > ul > li.active {
+  background:#069;	
+  border-bottom: none;
+  
+  
+}
+.accordion-menu > ul > li.has-sub > a span:before {
+	content:">";
+	font-size:16px;
+	margin-right:10px;
+	display: inline-block;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+            -webkit-transform-origin: 77% center;
+            -moz-transform-origin: 77% center;
+            -ms-transform-origin: 77% center;
+            -o-transform-origin: 77% center;
+            transform-origin: 77% center;
+
+		}
+.accordion-menu > ul > li.has-sub.active > a span:before {
+
+            -webkit-transform-origin: 77% center;
+            -moz-transform-origin: 77% center;
+            -ms-transform-origin: 77% center;
+            -o-transform-origin: 77% center;
+            transform-origin: 77% center;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+
+
+.accordion-menu > ul > li.has-sub > a span {
+  background: url("./img/icon_plus.png") 5% center no-repeat;
+    background-size:15px 15px;
+}
+.accordion-menu > ul > li.has-sub.active > a span {
+  background: url("./img/icon_minus.png") 5% center no-repeat;
+    background-size:15px 15px;
+  color:#fff;
+}
+
+.accordion-menu ul li:last-child ul {
+  display: none;
+  background: #fff;
+  padding:10px;
+  border: 1px solid #003F5C;
+
+}
+.accordion-menu ul ul {
+  display: block;
+  background: #fff;
+  padding:10px;
+  border: 1px solid #003F5C;
+
+}

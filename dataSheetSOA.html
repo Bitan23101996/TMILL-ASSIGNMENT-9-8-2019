@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Sheet SOA</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+<style>
+.wrapper {
+    margin-top: 5px;
+}
+
+.wrapper table thead tr {
+    background: rgb(208, 237, 255);
+}
+
+.wrapper .form-control {
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    padding: 3px 6px;
+	height: 30px;
+}
+
+.wrapper .table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 1px !important;
+	padding-left: 3px !important;
+
+}
+
+.wrapper td select {
+    border: 0;
+    width: 100%;
+    height: 34px;
+}
+
+.redFont {
+    color: red;
+    font-weight: bold;
+}
+
+.tableHead {
+    background: rgb(208, 237, 255);
+}
+
+.wrapper tfoot {
+    background: rgb(208, 237, 255);
+}
+</style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+
+                        <tr>
+                            <td class="tableHead"><span>Vessel:</span></td>
+                            <td><label>M.V. ARCHAGELOS MICHAEL</label></td>
+                            <td class="tableHead"><span>Delivery:</span></td>
+                            <td><label>03-01-2019 14:42:00</label></td>
+                            <td><label>UTC</label></td>
+                            <td class="tableHead"><span>CP Date:</span></td>
+                            <td><label>31-12-2018</label></td>
+                        </tr>
+                        <tr>
+                            <td class="tableHead"><span>Owner:</span></td>
+                            <td><label>ARIADNE SHIPTRADE S.A</label></td>
+                            <td class="tableHead"><span>Redelivery:</span></td>
+                            <td><label>04-02-2019 00:01:00</label></td>
+                            <td><label>UTC</label></td>
+                            <td class="tableHead"><span>Statement No:</span></td>
+                            <td><label>Final</label></td>
+                        </tr>
+                        <tr>
+                            <td class="tableHead"><span>Charterers</span></td>
+                            <td><label>ISL DUBAI</label></td>
+                            <td class="tableHead"><span>Voy ref:</span></td>
+                            <td><label>1819-075</label></td>
+                            <td><label></label></td>
+                            <td class="tableHead"><span>Statement Date:</span></td>
+                            <td><label>05/02/2019</label></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+
+                            <th scope="col" class="text-center" width="20%"><label>Particulars</label></th>
+                            <th scope="col" class="text-center" width="15%"><label>Hire From</label></th>
+                            <th scope="col" class="text-center" width="15%"><label>Hire To</label></th>
+                            <th scope="col" class="text-center" width="10%"><label>Days / Qty</label></th>
+                            <th scope="col" width="10%"></th>
+                            <th scope="col" class="text-center" width="10%"><label>Rate</label></th>
+                            <th scope="col" class="text-center" width="10%"><label>Debit (USD)</label></th>
+                            <th scope="col" class="text-center" width="10%"><label>Credit (USD)</label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td width="20%"></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+
+                        </tr>
+
+                    </tbody>
+                    <thead>
+                        <tr>
+
+                            <th scope="col" colspan="8"><label><u>Vessel Hire (all times in UTC)</u></label></th>
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td width="20%"><label>Hire period 1</label></td>
+                            <td class="textInputData" width="15%">
+                                <input type="text" class="form-control datepicker">
+                            </td>
+                            <td class="textInputData" width="15%">
+                                <input type="text" class="form-control datepicker">
+                            </td>
+                            <td width="10%"><label>25.0000</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>168750.00</label></td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td width="20%"><label>Hire period 2</label></td>
+                            <td class="textInputData" width="15%">
+                                <input type="text" class="form-control datepicker">
+                            </td>
+                            <td class="textInputData" width="15%">
+                                <input type="text" class="form-control datepicker">
+                            </td>
+                            <td width="10%"><label>6.3882</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>43120.31</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>-</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>-</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>-</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>-</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>-</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>31.38819</label></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="10%"><label>-</label></td>
+
+                        </tr>
+                    </tbody>
+
+
+                    <!--Bunker-->
+
+
+
+
+
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="8"><label><u>Bunkers (all quantities in MT)</u></label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td width="20%"><span>Bunker on Delivery (HSFO MT)</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>486.6000</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>194640.00</label></td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td width="20%"><span>Bunker on Delivery (LSGO MT)</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>47.3000</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>600.00</label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>28380.00</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><label></label></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker on Delivery (HSFO MT)</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>466.2040</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label>186481.60</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker on Delivery (LSGO MT)</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>42.3000</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>600.00</label></td>
+                            <td width="10%"><label>25380.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><label></label></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+
+                    </tbody>
+
+                    <!--Deductions-->
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="8"><label><u>Deductions</u></label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td width="20%"><span>Less 3.75% Addcom</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>192239.97</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>3.75%</label></td>
+                            <td width="10%"><label>7209.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <!--1 st table end here-->
+
+
+            <!--Offhire (In local Time)-->
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="8"><label><u>Offhire (In local Time)</u></label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td width="20%"><span>Offhire Windlass break down (4TH Jan 06:00 hrs - 4th Jan
+                                    22:26
+                                    hrs)</span></td>
+
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>0.6847</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>4621.88</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker consumption during the offhire period (IFO)</span></td>
+                            <td width="15%">
+                                <label>(2.5 MT x 0.68 days)</label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>1.7000</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label>680.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker consumption during the offhire period (MDO)</span></td>
+                            <td width="15%">
+                                <label>(0.1 MT x 0.68 days)</label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>0.0680</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>600.00</label></td>
+                            <td width="10%"><label>40.80</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 2 out of order due to Generator problem</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 00:30:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 07:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0677</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>457.03</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 1 Grab fixing</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 01:50:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 02:35:00</label>
+                            </td>
+                            <td width="10%"><label>0.0078</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>52.73</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 3 Grab fixing</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 02:40:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 03:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0035</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>23.44</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span> Vsl Crane 3 wire fixing</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 06:30:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 08:10:00</label>
+                            </td>
+                            <td width="10%"><label>0.0174</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>117.19</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span> Vsl Crane 3 out of order</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 08:10:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 08:40:00</label>
+                            </td>
+                            <td width="10%"><label>0.0052</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>35.16</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 1, 3 & 4 Power failure</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 09:30:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 10:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0156</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>105.47</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 4 Power failure</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 15:20:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 16:20:00</label>
+                            </td>
+                            <td width="10%"><label>0.0104</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>70.31</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 01 & 02 Generator Failure</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 15:15:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 17:10:00</label>
+                            </td>
+                            <td width="10%"><label>0.0399</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>269.53</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 04 Generator failure</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 20:20:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 21:40:00</label>
+                            </td>
+                            <td width="10%"><label>0.0139</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>93.75</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 01 Generator failure</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 20:20:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>30-01-2019 10:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.1424</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>960.64</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 02 Generator failure</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 20:20:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>30-01-2019 07:45:00</label>
+                            </td>
+                            <td width="10%"><label>0.1189</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>802.73</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span> Vsl crane 04 used by ships crew for handling spares</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 22:15:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 23:50:00</label>
+                            </td>
+                            <td width="10%"><label>0.0165</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>111.33</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span> Vsl Crane 04 Generator failure</span></td>
+                            <td width="15%">
+                                <label>30-01-2019 07:45:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>30-01-2019 09:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0130</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>87.89</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td width="20%"><span>Vsl crane 01 & 2 Crane testing by ship crew</span></td>
+                            <td width="15%">
+                                <label>30-01-2019 15:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>30-01-2019 15:20:00</label>
+                            </td>
+                            <td width="10%"><label>0.0069</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>46.88</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 02 Grab Accident</span></td>
+                            <td width="15%">
+                                <label>30-01-2019 15:40:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>30-01-2019 20:25:00</label>
+                            </td>
+                            <td width="10%"><label>0.0495</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>333.98</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl offered only 3 hooks from commencement(1 cr off)</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 01:15:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>31-01-2019 11:30:00</label>
+                            </td>
+                            <td width="10%"><label>0.6068</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>4095.70</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker consumption during crane off hire 1.1354 days</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>5.6770</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label>2270.80</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker consumption during crane off hire 1.1354 days</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>0.1140</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>600.00</label></td>
+                            <td width="10%"><label>68.40</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 03 out of order</span></td>
+                            <td width="15%">
+                                <label>31-01-2019 07:30:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>31-01-2019 10:30:00</label>
+                            </td>
+                            <td width="10%"><label>0.0313</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>210.94</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 01 Grab Safety Pin Fixing</span></td>
+                            <td width="15%">
+                                <label>31-01-2019 08:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>31-01-2019 08:40:00</label>
+                            </td>
+                            <td width="10%"><label>0.0069</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>46.87</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 01 Power failure</span></td>
+                            <td width="15%">
+                                <label>31-01-2019 09:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>31-01-2019 10:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0104</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>70.31</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 04 Power failure</span></td>
+                            <td width="15%">
+                                <label>31-01-2019 10:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>31-01-2019 11:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0104</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>70.31</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 01 Crane out of Order</span></td>
+                            <td width="15%">
+                                <label>31-01-2019 22:50:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>01-02-2019 02:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0330</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>222.66</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 02 Crane out of order</span></td>
+                            <td width="15%">
+                                <label>31-01-2019 23:45:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>01-02-2019 03:40:00</label>
+                            </td>
+                            <td width="10%"><label>0.0408</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>275.39</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl Crane 01& 02 Crane Power failure</span></td>
+                            <td width="15%">
+                                <label>01-02-2019 08:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>01-02-2019 08:30:00</label>
+                            </td>
+                            <td width="10%"><label>0.0104</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>70.31</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 02 Grab oil leakage</span></td>
+                            <td width="15%">
+                                <label>01-02-2019 10:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>01-02-2019 15:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0521</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>351.56</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 04 Crane Power failue</span></td>
+                            <td width="15%">
+                                <label>01-02-2019 14:15:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>01-02-2019 14:45:00</label>
+                            </td>
+                            <td width="10%"><label>0.0052</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>35.16</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 01 Crane Power failue</span></td>
+                            <td width="15%">
+                                <label>01-02-2019 16:30:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>02-02-2019 01:20:00</label>
+                            </td>
+                            <td width="10%"><label>0.0920</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>621.09</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 02 Ship Grab wire fixing</span></td>
+                            <td width="15%">
+                                <label>02-02-2019 00:15:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>02-02-2019 01:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0078</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>52.73</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 03 Ship Generator Battery Leakage</span></td>
+                            <td width="15%">
+                                <label>02-02-2019 02:50:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>02-02-2019 08:10:00</label>
+                            </td>
+                            <td width="10%"><label>0.0556</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>375.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 02 Ship Generator Battery Leakage</span></td>
+                            <td width="15%">
+                                <label>02-02-2019 02:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>02-02-2019 08:10:00</label>
+                            </td>
+                            <td width="10%"><label>0.0642</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>433.59</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 02 Ship Crane out of order</span></td>
+                            <td width="15%">
+                                <label>02-02-2019 10:00:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>02-02-2019 13:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0313</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>210.94</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 01 Ship Crane power failure</span></td>
+                            <td width="15%">
+                                <label>02-02-2019 18:40:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>02-02-2019 20:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0139</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>93.75</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 02 Ship Crane power failure</span></td>
+                            <td width="15%">
+                                <label>02-02-2019 18:40:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>02-02-2019 19:40:00</label>
+                            </td>
+                            <td width="10%"><label>0.0104</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>70.31</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vsl crane 04 ship power cable repair</span></td>
+                            <td width="15%">
+                                <label>02-02-2019 19:50:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>03-02-2019 00:40:00</label>
+                            </td>
+                            <td width="10%"><label>0.0503</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>339.84</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker consumption during crane off hire 0.5260 days</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>2.6300</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label>1052.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker consumption during crane off hire 0.5260 days</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>0.5260</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>600.00</label></td>
+                            <td width="10%"><label>315.60</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunkering time at Singapore [for 220 MT] </span></td>
+                            <td width="15%">
+                                <label>15-01-2019 03:35:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>15-01-2019 16:24:00</label>
+                            </td>
+                            <td width="10%"><label>0.1639</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>1106.62</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker used during Owners Bunkering </span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>1.0000</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Agency fees for bunkering at Singapore (Owns Bunker)</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>1.0000</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>1000.00</label></td>
+                            <td width="10%"><label>1000.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Grab 8 cbm used 3 Cranes</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 01:15:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 10:20:00</label>
+                            </td>
+                            <td width="10%"><label>0.0946</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>638.67</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Grabs 10 Cbm Used 3 Cranes</span></td>
+                            <td width="15%">
+                                <label>29-01-2019 10:20:00</label>
+                            </td>
+                            <td width="15%">
+                                <label>29-01-2019 21:00:00</label>
+                            </td>
+                            <td width="10%"><label>0.0556</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>375.00</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Vessel Underperformance during laden voyage</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>0.2479</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>6750.00</label></td>
+                            <td width="10%"><label>1673.33</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Bunker over consumption during Laden passage</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>30.8160</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>400.00</label></td>
+                            <td width="10%"><label>12326.40</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <!--End of 2nd Table-->
+            </div>
+
+
+
+
+
+
+
+
+
+            <!--Others-->
+            <!--3rd table start-->
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="8"><label><u>Others</u></label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td width="20%"><span>CVE(per month pro-rata)</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>28.48</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>1500.00</label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>1424.00</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>ilohc</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label>1.00</label></td>
+                            <td width="10%"><label>@</label></td>
+                            <td width="10%"><label>5000.00</label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>5000.00</label></td>
+
+                        </tr>
+
+                        <tr>
+                            <!--Drop Down Include Here-->
+                            <td width="20%">
+                                <select>
+                                    <option value="Select">Select</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                </select>
+                            </td>
+
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                        </tr>
+
+
+
+
+                    </tbody>
+
+
+                </table>
+                <!--End of 3rd Table-->
+            </div>
+
+
+
+
+            <!--4th Table  Payments made to owners begin-->
+
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="8"><label><u>Payments made to owners</u></label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td width="20%"><span>1st hire paid to owners</span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <span>10-Jan-19</span>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>147469.23</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span>Remittance received from owners for bunker supplied </span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>44941.71</label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>494964.17</label></td>
+                            <td width="10%"><label>486256.02</label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><label>Amount due to Owners</label></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label>$ (8708.15)</label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><label></label></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                        <tr>
+                            <td width="20%"><span><i class="redFont">Pls do not mention vessel name in any
+                                        transaction</i></span></td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="15%">
+                                <label></label>
+                            </td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+                            <td width="10%"><label></label></td>
+
+                        </tr>
+                    </tbody>
+
+
+                </table>
+                <!--End of 4th Table-->
+            </div>
+
+
+
+
+            <!--start of 5th Table-->
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="8"><label><u>Please remit to:</u></label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8">
+                                <div><label>Beneficiary: Minos Shipping FZE </label></div>
+                                <div>
+                                    <label>Beneficiary's address:</label>
+                                    <label> Business Centre,
+                                        Al Shmookh Building, UAQ Free Trade Zone,
+                                        Umm Al Quwain, UAE
+                                    </label>
+                                </div>
+                                <br>
+                                <div>
+                                    <label>Bank Name:</label>
+                                    <label> Emirates NBD</label>
+                                </div>
+                                <div>
+                                    <label>Branch :</label>
+                                    <label> AL ITTIHAD </label>
+                                </div>
+                                <div>
+                                    <label>SWIFT Code :</label>
+                                    <label> EBILAEAD </label>
+                                </div>
+                                <div>
+                                    <label>IBAN. :</label>
+                                    <label>AE190260000515354114702 (USD) </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td width="20%"><span>E & OE</span></td>
+                            <td width="80%" class="text-right"><span>This document is generated electronically and does
+                                    not need a
+                                    signature.</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+                <!--End of 5th Table-->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $('.datepicker').datepicker({
+                dateFormat: 'dd-mm-yy',
+                changeMonth: true,
+                changeYear: true
+            });
+
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('select').change(function () {
+
+
+                var row = '<tr>' +
+                    '<td width="20%"> <span><input type="text" class="form-control"> </span></td>' +
+                    '<td  width="15%"> <span><input type="text" class="form-control"> </span></td>' +
+                    '<td width="15%"> <span><input type="text" class="form-control"> <span></td>' +
+                    '<td width="10%"><span></span></td>' +
+                    '<td width="10%"><span></span></td>' +
+                    '<td width="10%"><span></span></td>' +
+                    '<td width="10%"><span></span></td>' +
+                    '<td width="10%"><span></span></td>' +
+                    '</tr>';
+                //$("table").append(row);
+                if ($('select option:selected').val() == "A") {
+
+                    $(this).closest("table").append(row);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

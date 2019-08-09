@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Panel 1</title>
+    <!-- Custom fonts for this template-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+   
+    <link href="css/jquery-ui.css" rel="stylesheet">
+	<style>
+	
+	.custom-panel .panel {
+		box-shadow: 0px 7px 7px 1px rgb(172, 172, 172);
+	}
+
+	.custom-panel{
+		margin-top: 25px;
+	}
+	.custom-panel .row {
+
+		margin-bottom: 15px;
+	}
+
+	.custom-panel .radio .pr-4 {
+		padding-right: 4px;
+
+	}
+
+	.custom-panel span {
+		font-size: 16px;
+	}
+
+	.custom-panel label {
+		font-size: 16px;
+		
+	}
+	.custom-panel input[type=text],.custom-panel input[type=number],.custom-panel input[type=date],
+	.custom-panel select, .custom-panel textarea{
+		border-radius: 20px;
+		box-shadow: none;
+	}
+
+
+	</style>
+</head>
+
+<body>
+
+        <div class="container-fluid custom-panel">
+            <div class="panel panel-primary">
+				<div class="panel-heading">Header Text</div>
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span>TC NO.</span>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <label>521</label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Vessel</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Barane Naree</label>
+                        </div>
+                    </div>
+                    <!--End of 1st row-->
+
+
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span>Port</span>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Mina Saqr-Paradip</label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Date</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <span>
+                                <input type="text" value="26/06/2019" id="datepicker" class="form-control dateTxt">
+                            </span>
+                        </div>
+                    </div>
+                    <!--End of 2nd row-->
+
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span>Amount</span>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <span><input type="text" value="5000" class="form-control" /></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Vendor</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+
+                                <select class="form-control">
+                                    <option>Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of 3rd row-->
+
+
+
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span>Currency</span>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+
+                                <select class="form-control">
+                                    <option>Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Vendor Invoice No.:</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of 4th row-->
+
+                    <div class="row">
+                        <div class="col-sm-3">
+							<span>Status </span>
+						</div>
+                        <div class="col-sm-3">
+                            <div class="radio">
+                                <label class="pr-4"><input type="radio" name="radio">Pending</label>
+                                <label><input type="radio" name="radio">Complete</label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!--End of 5th row-->
+					</div>
+					<!--end of panel-body-->
+					<div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="button" class="btn btn-primary">Save</button>
+
+                        </div>
+                    </div>					
+					</div>
+
+
+
+
+
+            </div>
+        </div>
+        <!--End of container-fluid-->
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+/* Base Styles */
+body
+{
+	margin:0;
+	padding:0;
+	
+}
+
+#cssmenu
+{
+	
+	
+}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  position: relative;
+}
+#cssmenu {
+  width: 300px;
+  border-bottom: 4px solid #656659;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  //overflow-y:scroll;
+}
+#cssmenu a {
+  line-height: 1.3;
+}
+#cssmenu > ul > li:first-child {
+  background: #66665e;
+  background: -moz-linear-gradient(#66665e 0%, #45463d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));
+  background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);
+  background: linear-gradient(#66665e 0%, #45463d 100%);
+  background:linear-gradient(to right,#2096BF,#2998BF);
+	border-top: 1px solid #003F5C;
+    border-bottom: 1px solid #1a1a1a;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+#cssmenu > ul > li:first-child > a {
+  padding: 8px 0px;
+  background: url("images/pattern.png") top left repeat;
+  border: none;
+  border-top: 1px solid #818176;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+ /*  font-family: 'Ubuntu', sans-serif; */
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: bold; 
+  /* text-shadow: 0 -1px 1px #000000; */
+}
+#cssmenu > ul > li:first-child > a > span {
+  padding: 0;
+}
+#cssmenu > ul > li:first-child:hover {
+  background: #66665e;
+  background: -moz-linear-gradient(#66665e 0%, #45463d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));
+  background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);
+  background:#0a3957;
+}
+
+#cssmenu > ul > li {
+  background: #e94f31;
+  background: -moz-linear-gradient(#e94f31 0%, #d13516 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e94f31), color-stop(100%, #d13516));
+  background: -webkit-linear-gradient(to right,#0B384D,#175875,#0F4259,#006a9a);
+  background:linear-gradient(to right,#2096BF,#2998BF);
+  text-indent:15px;
+ //   -webkit-transition:1s;
+
+}
+#cssmenu > ul > li:not(.has-sub) {
+  text-indent:50px;
+
+
+}
+
+#cssmenu > ul > li:hover {
+  background: #e84323;
+  background: -moz-linear-gradient(#e84323 0%, #c33115 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e84323), color-stop(100%, #c33115));
+  background: -webkit-linear-gradient(#e84323 0%, #c33115 100%);
+  background: linear-gradient(#e84323 0%, #c33115 100%);
+  background:#0a3957;
+  }
+#cssmenu > ul > li > a {
+  font-size: 1.1em;
+  display: block;
+  font-weight:bold;
+  background: url("images/pattern.png") top left repeat;
+  color: #ffffff;
+	border-top: 1px solid #003F5C;
+    border-bottom: 1px solid #1a1a1a;
+  border-top: none;
+//  text-shadow: 0 -1px 1px #751d0c;
+
+}
+#cssmenu > ul > li > a > span {
+  display: block;
+  padding: 12px 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+#cssmenu > ul > li > a:hover {
+  text-decoration: none;
+  color:#ccc;
+  }
+#cssmenu > ul > li.active {
+  background:#0a3957;	
+  border-bottom: none;
+  
+  
+}
+#cssmenu > ul > li.has-sub > a span:before {
+	content:"+";
+	font-size:23px;
+	margin-right:10px;
+	display: inline-block;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+            -webkit-transform-origin: 77% center;
+            -moz-transform-origin: 77% center;
+            -ms-transform-origin: 77% center;
+            -o-transform-origin: 77% center;
+            transform-origin: 77% center;
+
+		}
+#cssmenu > ul > li.has-sub.active > a span:before {
+
+            -webkit-transform-origin: 77% center;
+            -moz-transform-origin: 77% center;
+            -ms-transform-origin: 77% center;
+            -o-transform-origin: 77% center;
+            transform-origin: 77% center;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+
+/*
+#cssmenu > ul > li.has-sub > a span {
+  background: url("images/icon_plus.png") 5% center no-repeat;
+    background-size:15px 15px;
+}
+#cssmenu > ul > li.has-sub.active > a span {
+  background: url("images/icon_minus.png") 5% center no-repeat;
+    background-size:15px 15px;
+  color:#E1EBB3;
+}
+*/
+
+
+#cssmenu ul ul {
+  display: none;
+  background: #fff;
+  border-right: 1px solid #a2a194;
+  border-left: 1px solid #a2a194;
+}
+#cssmenu ul > ul > li {
+  padding: 0;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: none;
+  text-indent:0px;
+  background: #f7f7f7;
+  background: -moz-linear-gradient(#f7f7f7 0%, #ececec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #ececec));
+  background: -webkit-linear-gradient(#f7f7f7 0%, #ececec 100%);
+  background: linear-gradient(#f7f7f7 0%, #ececec 100%);
+}
+
+#cssmenu ul ul li:hover {
+	background: #c1c1c1;
+	
+	}
+#cssmenu ul ul li:last-child {
+  border-bottom: none;
+}
+#cssmenu ul ul a {
+  padding: 10px 10px 10px 0px;
+  display: block;
+  color: #000 !important;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+#cssmenu ul ul li a.active {
+
+  color: #fff !important;
+
+}
+/*
+#cssmenu ul ul a:before {
+  content: '\232A';
+  position: absolute;
+  left: 10px;
+  color: #e94f31;
+}
+
+*/
+
+#cssmenu ul ul a:hover {
+  color: #e94f31;
+}
+
+/*
+#cssmenu ul ul li.has-sub a span {
+  background: url("images/plus.png") 10% center no-repeat;
+  background-size:10px 10px;
+  
+}
+#cssmenu ul ul li.has-sub.active a span {
+  background: url("images/minus.png") 10% center no-repeat;
+  background-size:10px 10px;
+}
+*/
+
+
+#cssmenu ul ul li.has-sub a span:before {
+  	content:"+";
+	font-size:18px;
+	margin-right:10px;
+	display: inline-block;
+        -webkit-transition: all .3s ease;;
+        -moz-transition: all .3s ease;;
+        -ms-transition: all .3s ease;;
+        -o-transition: all .3s ease;;
+        transition: all .3s ease;
+            -webkit-transform-origin: 80% center;
+            -moz-transform-origin: 80% center;
+            -ms-transform-origin: 80% center;
+            -o-transform-origin: 80% center;
+            transform-origin: 80% center;
+}
+#cssmenu ul ul li.has-sub.active a span:before {
+
+            -webkit-transform-origin: 80% center;
+            -moz-transform-origin: 80% center;
+            -ms-transform-origin: 80% center;
+            -o-transform-origin: 80% center;
+            transform-origin: 80% center;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+
+
+
+#cssmenu ul ul ul {
+  display: none;
+  background: #fff;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+#cssmenu ul ul ul li {
+  padding-left: 0px;
+  box-sizing:border-box;
+  border: 1px solid transparent;
+  border-top: none;
+  text-indent:60px;
+  color:#eee;
+  background: #f7f7f7;
+  background: -moz-linear-gradient(#f7f7f7 0%, #ececec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #ececec));
+  background: -webkit-linear-gradient(#f7f7f7 0%, #ececec 100%);
+    background:linear-gradient(to right,#2096BF,#2998BF);
+}
+#cssmenu ul ul ul li a {
+ color:#fff !important;
+   //text-shadow: 0 -1px 1px #000000;
+   font-size: 0.9em;
+   font-weight: bold;
+}
+/* #cssmenu ul ul ul li a:before {
+ content:">> ";
+ color:#a22;
+ }
+ */
+#cssmenu ul ul  li a {
+  font-size: .9em;
+  display: block;
+  background: url("images/pattern.png") top left repeat;
+  color: #ffffff;
+  padding-left: 30px;
+	border-top: 1px solid #003F5C;
+    border-bottom: 1px solid #1a1a1a;
+  border-top: none;
+}
+#cssmenu  ul ul li a span {
+  display: block;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+#cssmenu ul ul li.active {
+  background:#c1c1c1;	
+  border-top: none;
+  border-bottom: none;
+}
+
+#cssmenu ul ul ul li:hover {
+ background:#0a3957;
+}
+
+#cssmenu ul ul ul li.active {
+ background:#0a3957;
+
+  border-top: none;
+  color:#fff;
+  border-bottom: none;
+}
+#cssmenu ul ul ul li.active a {
+  color:#fff !important;
+}

@@ -1,0 +1,175 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-signin {
+  border-radius: 0;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 0;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 0;
+  padding: 10px;
+}
+
+
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.page-heading {
+    letter-spacing: 2px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Newly Added css*/
+
+.page-header{
+	letter-spacing:2px;
+	font-size: 16px;	
+	border-bottom: 1px solid #ccc;
+}
+
+.form-control {
+    margin-bottom: 15px;
+	border: 1px solid #bbb;
+    border-radius: 4px;
+	box-shadow: none;
+}
+.card{
+	border: 1px solid #777;
+	padding: 10px;
+	border-radius: 7px;
+	margin-bottom: 10px;
+    height: 185px;
+/*	box-shadow: 0px 0px 5px #ccc;*/
+}
+.card-text-header{
+	font-size: 16px;	
+	color:#000;
+}
+.card-text{
+	font-size: 15px;	
+	color:#000;
+}
+.table-bordered {
+    border: 1px solid #777;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #777;
+}
+
+.table-bordered>tbody>tr>td{
+	font-size: 15px;	
+}
+
+
+/*Panel Accordion*/
+
+.panel-accordion {
+    list-style: none;
+    padding: 0 0 0 0;
+	margin: 10px 0;
+}
+
+
+.panel-accordion .page-header {
+    font-size: 25px;
+}
+
+.panel-accordion .heading {
+    padding: 5px;
+    display: block;
+    background-color: rgb(209, 209, 209);
+    color: rgb(0, 0, 0);
+    font-weight: bold; 
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.panel-accordion .icon {
+    float: right;
+    margin-top: 5px;
+}
+
+
+.panel-accordion .heading:hover {
+    background: rgb(51, 122, 183);
+    color: rgb(255, 255, 255);
+}
+
+.panel-accordion .heading.active {
+    background: rgb(51, 122, 183);
+    color: rgb(255, 255, 255);
+}
+
+.panel-accordion .item {
+    border-top: none;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    border-left: 1px solid rgb(209, 209, 209);
+    border-right: 1px solid rgb(209, 209, 209);
+    margin-bottom: 10px;
+    padding-top: 20px;
+    margin-left: 0px;
+    margin-top: -8px;
+
+}
+
+.panel-accordion .form-group {
+    padding: 10px;
+}
+
+.panel-accordion .heading span {
+    font-size: 15px;
+}
+
+.panel-accordion .clickBtn {
+    margin-top: 5px;
+}

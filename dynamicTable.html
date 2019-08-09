@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Table</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="css/style.css" rel="stylesheet">
+	
+	<style>
+	.addRowSection{
+		border: 1px dashed #c6c6c6;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.addRowSection a{
+		padding:5px;
+		display: block;
+		line-height: 30px;
+	}
+	.addRowSection a{
+		text-decoration: none;
+	}
+	
+	</style>
+</head>
+<body>
+
+<div class="container">
+ <div class="table-responsive">
+  <table class="table table-condensed" id="mytable">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+		<th>Column 4</th>
+        <th>Column 5</th>
+		<th>Column 6</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Row Data 1</td>
+		<td>Row Data 1</td>
+		<td>Row Data 1</td>
+		<td>Row Data 1</td>
+		<td>Row Data 1</td>
+		<td>Row Data 1</td>
+		<td></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+<div class="addRowSection text-center">
+	<a href="javascript:void(0);" id="add"><i class="fa fa-plus"></i> Add one more row</a>
+</div>
+</div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function() {
+
+$("#add").click(function() {
+	let row='';
+	row += '<tr class="new"">'
+	row += '<td><input type="text" class="form-control"></td>';
+	row += '<td><input type="text" class="form-control"></td>';
+	row += '<td><input type="text" class="form-control"></td>';
+	row += '<td><input type="text" class="form-control"></td>';
+	row += '<td><input type="text" class="form-control"></td>';
+	row += '<td><input type="text" class="form-control"></td>';
+	row += '<td><button class="btn btn-danger btn-sm" onclick="deleteRow(this);" data-toggle="tooltip" title="Delete Row"><i class="fa fa-trash"></i></button></td>';
+	row += '</tr>';
+    $('#mytable').append(row);
+	
+});
+
+
+
+});
+
+
+var deleteRow = function(obj){
+	if(confirm("Are you sure to remove this row?")){
+		$(obj.closest("tr")).remove();
+	}
+			
+}	
+</script>
+</body>
+</html>
+

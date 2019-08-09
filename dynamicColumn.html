@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Sheet</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .datasheet {
+            margin-top: 4px;
+        }
+
+        .datasheet .textVertical {
+            width: 5%;
+        }
+
+        .datasheet .form-control {
+
+            box-shadow: none;
+            border: 0;
+            border-radius: 0;
+            padding: 3px 6px;
+        }
+
+
+        .datasheet .form-control:focus {
+            border-color: #cccccc;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .datasheet .table tbody tr td.textInputData {
+            padding: 0;
+        }
+
+        .datasheet .table tbody tr td {
+            padding: 4px;
+        }
+
+        .datasheet td.textVertical {
+            height: 100%;
+            white-space: nowrap;
+        }
+
+
+        .datasheet td.textVertical>div {
+            font-weight: bold;
+            /* font-size: 20px; */
+            transform: translate(17px, 132px) rotate(-90deg);
+            width: 14px;
+        }
+
+        .datasheet .table-bordered>tbody>tr>td,
+        .datasheet .table-bordered>tbody>tr>th,
+        .datasheet .table-bordered>tfoot>tr>td,
+        .datasheet .table-bordered>tfoot>tr>th,
+        .datasheet .table-bordered>thead>tr>td,
+        .datasheet .table-bordered>thead>tr>th {
+            border: 1px solid #888;
+        }
+
+        .datasheet .table>thead:first-child>tr:first-child>th {
+            border-top: 1px solid #888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid datasheet">
+        <div class="table-responsive">
+            <table class="table table-bordered " id="dynamicTable">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-primary" onclick="save()">Submit</button>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var data = [{
+            "HEADER": "EXP DELY TIME / BUNKER",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "ETA/ Arrd",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "NOR",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "ETB- BERTH / ANCHORAGE OPS",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "CG WK COMM",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "LAST 24 HOURS",
+            "LPORT": null,
+            "DPORT1": "D1",
+            "DPORT2": "D2",
+            "DPORT3": "D3"
+        }, {
+            "HEADER": "TTL LDD/DISH",
+            "LPORT": "55555",
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "BALANCE",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "ETCD/CG WK COMP",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "ETS/SAILED/CAST OFF",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "REDELIVERED",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "DEPARTURE DFT ",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "REDELIVERY TIME / BUNKER",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "REDLY NTC DUE / GIVEN",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "NO OF DAYS",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "VOYAGE UPTO LP",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "LOADPORT",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "VOYAGE UPTO DP",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "DISCHARGE PORT",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "SPARE DAYS SAILING",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "SPARE DAYS IN PORT",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "TOTAL",
+            "LPORT": null,
+            "DPORT1": null,
+            "DPORT2": null,
+            "DPORT3": null
+        }, {
+            "HEADER": "APPROVAL RECEIVED",
+            "LPORT": null,
+            "DPORT1": "45",
+            "DPORT2": null,
+            "DPORT3": "67"
+        }]
+
+
+        //console.log(length)
+
+        for (let item of data) {
+            // console.log(item.HEADER);
+            //console.log(Object.keys(item).length);
+            //  console.log(item.length);
+        }
+
+
+
+        var columnLength = 5;
+        /* var dataDailyReportMileStones = [
+            ['EXP DELY TIME / BUNKER', '', '', ''],
+            ['ETA/ Arrd', '', '', ''],
+            ['NOR', '', '', ''],
+            ['ETB- BERTH / ANCHORAGE OPS', '', '', ''],
+            ['CG WK COMM', '', '', ''],
+            ['LAST 24 HOURS', '', '', ''],
+            ['TTL LDD/DISH', '', '', ''],
+            ['BALANCE', '', '', ''],
+
+            ['ETCD/CG WK COMP', '', '', ''],
+            ['ETS/SAILED/CAST OFF', '', '', ''],
+            ['REDELIVERED', 'hhgghg', '', ''],
+            ['DEPARTURE DFT ', '', '', ''],
+            ['REDELIVERY TIME / BUNKER', '', '', ''],
+
+            ['REDLY NTC DUE / GIVEN', '', '', ''],
+            ['NO OF DAYS', '', '', ''],
+
+            ['VOYAGE UPTO LP', '', '', ''],
+            ['LOADPORT', '', '', ''],
+            ['VOYAGE UPTO DP', '', '', ''],
+            ['DISCHARGE PORT', '', '', ''],
+            ['SPARE DAYS SAILING', '', '', ''],
+            ['SPARE DAYS IN PORT', '', '', ''],
+            ['TOTAL', '', '', ''],
+            ['APPROVAL RECEIVED', '', '', ''],
+
+        ] */
+
+        var headerRow = '';
+        headerRow += '<tr>';
+        for (let i = 0; i < columnLength; i++) {
+            if (i == 0) {
+                headerRow += '<th class="text-center"></th>';
+            } else if (i == 1) {
+                headerRow += '<th class="text-center">L/PORT</th>';
+            } else {
+                headerRow += '<th class="text-center">D/PORT</th>'
+            }
+        }
+        headerRow += '</tr>';
+        $("#dynamicTable").find("thead").append(headerRow);
+
+
+        var bodyRow = '';
+
+        for (let i = 0; i < data.length; i++) {
+            // var p = Object.keys(data[i]).length;
+            bodyRow += '<tr>';
+            var cnt = 1;
+            for (let j = 0; j < columnLength; j++) {
+
+                if (j == 0) {
+
+                    bodyRow += '<td>' + data[i].HEADER +
+                        '<input type="hidden" class="form-control" value="' + data[i].HEADER +
+                        '"></td>';
+                } else if (j == 1) {
+
+                    if (i == 0 || i == 1 || i == 2 || i == 3 || i == 4 || i == 8 || i == 9) {
+                        bodyRow += '<td class="textInputData"><input type="date" class="form-control cell' + i + j +
+                            '" id="cell' + i + j + '"  value="' + data[i].LPORT +
+                            '" onchange="getData(this,' + i + ',' + j + ')"> </td>';
+                    } else {
+                        if (data[i].LPORT == null) {
+                            bodyRow += '<td class="textInputData"><input type="text" class="form-control cell' + i + j +
+                                '" id="cell' + i + j + '" value=" " onchange="getData(this,' + i + ',' + j +
+                                ')"> </td>';
+                        } else {
+                            bodyRow += '<td class="textInputData"><input type="text" class="form-control cell' + i + j +
+                                '" id="cell' + i + j + '" value="' + data[i].LPORT +
+                                '" onchange="getData(this,' + i + ',' + j + ')"> </td>';
+                        }
+
+                    }
+
+                } else {
+                    var x = "DPORT";
+                    console.log(data[i][x + (cnt)])
+                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 8 || i == 9) {
+                        bodyRow += '<td class="textInputData"><input type="date" class="form-control cell' + i + j +
+                            '" id="cell' + i + j + '"  value="' + data[i][x + (cnt)] +
+                            '" onchange="getData(this,' + i + ',' + j + ')"> </td>';
+
+                    } else {
+                        if (data[i][x + (cnt)] == null) {
+                            bodyRow += '<td class="textInputData"><input type="text" class="form-control cell' + i + j +
+                                '" id="cell' + i + j + '" value=" " onchange="getData(this,' + i + ',' + j +
+                                ')"> </td>';
+
+                        } else {
+                            bodyRow += '<td class="textInputData"><input type="text" class="form-control cell' + i + j +
+                                '" id="cell' + i + j + '" value="' + data[i][x + (cnt)] +
+                                '" onchange="getData(this,' + i + ',' + j + ')"> </td>';
+
+                        }
+
+                    }
+                    cnt++;
+
+                }
+
+            }
+            bodyRow += '</tr>';
+
+        }
+        $("#dynamicTable").find("tbody").append(bodyRow);
+
+        var c1 = '',
+            c2 = '',
+            c3 = 0;
+
+        function getData(data, i, j) {
+            if (i == 0 && j == 1) {
+                c1 = $("#cell" + i + j).val();
+
+            }
+            if (i == 1 && j == 1) {
+                c2 = $("#cell" + i + j).val();
+
+            }
+            if (c1 != '' && c2 != '') {
+                c3 = calculateDay(c1, c2);
+                $("#cell152").val(c3);
+            }
+            //console.log($(data).val());
+            //console.log(i);
+            console.log(c3);
+        }
+
+        function calculateDay(firstdate, seconddate) {
+            var startDay = new Date(firstdate);
+            var endDay = new Date(seconddate);
+            var millisecondsPerDay = 1000 * 60 * 60 * 24;
+            var millisBetween = endDay.getTime() - startDay.getTime();
+            var days = millisBetween / millisecondsPerDay;
+            if (isNaN(days)) {
+                days = 0;
+            }
+            return days;
+        }
+
+        var header = [];
+        var i = 1;
+        $("#dynamicTable").find("thead").find("tr").find("th").each(function (key, th) {
+            if ($(th).text() == '') {
+                header.push('HEADER');
+            }
+            if ($(th).text() == 'L/PORT') {
+                header.push('LPORT');
+            }
+            if ($(th).text() == 'D/PORT') {
+                header.push('DPORT' + i);
+                i++;
+            }
+        });
+        //  console.log(header);
+
+        function save() {
+            var arr = [];
+            var value;
+            var obj = {};
+            var d = {}
+            $("#dynamicTable").find("tbody").find("tr").each(function (key, row) {
+                var obj = {};
+                $(row).find("td").each(function (index, data) {
+                    value = $(data).find("input").val();
+                    obj[header[index]] = value;
+                })
+                arr.push(obj)
+            });
+            console.log(arr);
+
+        }
+    </script>
+
+</body>
+
+</html>

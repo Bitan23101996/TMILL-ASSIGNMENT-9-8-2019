@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- Custom fonts for this template-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/bootstrap-class.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <!--Nav Start-->
+        <!--    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa fa-bars" id="pin-menu"></i>
+                        <div>
+                            <img alt="Logo" src="" class="img-responsive logo">
+                        </div>
+                    </a>
+                    <div class="input-group">
+
+                        <h4>TMILL</h4>
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+ -->
+
+        <nav class="navbar navbar-default">
+            <div class="nav-head mt-12 ml-12">
+
+
+                <i class="fa fa-bars" id="pin-menu"></i>
+
+                <a href="#" style="text-decoration: none;">
+                    <div class="companyLogo displayInline">
+                        <img src="img/logo.png" width="150" class="" alt="Logo">
+                    </div>
+                </a>
+
+                <div class="companyName displayInline">
+                    <span>TMILL</span>
+                </div>
+
+
+
+
+
+
+                <div class="dropdown userProfile displayInline">
+
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="img-responsive userIcon displayInline" src="./img/user.png">
+                        <span class="ml-5">A.Chakraborty</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <div class="row">
+
+                            <div class="col-sm-4">
+                                <img class="img-responsive userImg" src="./img/user.png">
+                                <div class="text-center userName mt-10"><span>A.Chakraborty<span></div>
+                            </div>
+
+                            <div class="col-sm-8">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-user"></i>
+                                    <span>View Profile</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-cog"></i>
+                                    <span> Settings</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-sign-out"></i>
+                                    <span>Log-out</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </ul>
+                </div>
+
+
+
+                <!--Notification-->
+                <!-- <div class="dropdown notificationIcon displayInline">
+
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <i class="fa fa-bell default-text"></i>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item">
+                            <i class="fa fa-user"></i> View Profile </a>
+                        <a class="dropdown-item">
+                            <i class="fa fa-cog"></i> Settings</a>
+                        <a class="dropdown-item">
+                            <i class="fa fa-sign-out"></i> Log-out</a>
+                    </ul>
+                </div>
+ -->
+            </div>
+        </nav>
+
+
+
+
+        <!--Nav End-->
+        <div class="page-wrapper">
+            <div class="menu-bar">
+                <div class="menu-item" id="menu-item">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);" class="menuItem" title="Dashboard" data-toggle="tooltip">
+                                <span>
+                                    <i class="fa fa-tachometer icon"></i>
+                                    <b class="menu-text">Dashboard</b>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" title="Menu 1" data-toggle="tooltip">
+                                <span>
+                                    <i class="fa fa-file-text icon"></i>
+                                    <b class="menu-text">Menu 1</b>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Menu 2" data-toggle="tooltip">
+                                <span>
+                                    <i class="fa fa-university icon"></i>
+                                    <b class="menu-text">Menu 2</b>
+                                </span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Menu1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="Menu 3" data-toggle="tooltip">
+                                <span>
+                                    <i class="fa fa-laptop icon"></i>
+                                    <b class="menu-text">Menu 3</b>
+                                </span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#0">
+                                        <span>Menu1</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#0">Sub menu 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">Sub menu 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#0">
+                                        <span>Menu2</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#0">Sub menu 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">Sub menu 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#0">
+                                        <span>Menu3</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#0">Sub menu 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">Sub menu 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#0" title="Menu 4" data-toggle="tooltip">
+                                        <span>Menu4</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#0">Sub menu 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">Sub menu 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <a href="#0">
+                                        <span>Menu5</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#0">Sub menu 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">Sub menu 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+
+
+
+                            </ul>
+
+                        <li>
+                            <a href="#0" title="Menu 4" data-toggle="tooltip">
+                                <span>
+                                    <i class="fa fa-users icon"></i>
+                                    <b class="menu-text">Menu 4</b>
+                                </span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Menu1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu3</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu4</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu5</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="#" title="Menu 5" id="menu5" data-toggle="tooltip">
+                                <span>
+                                    <i class="fa fa-question icon"></i>
+                                    <b class="menu-text">Mneu 5</b>
+                                </span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Menu1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu3</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!--Page-wrapper class end -->
+
+        <div class="main-container">
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Heading</div>
+                            <div class="panel-body">Content</div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Heading</div>
+                            <div class="panel-body">Content</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Heading</div>
+                            <div class="panel-body">Content</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--1st Row End-->
+
+
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Heading</div>
+                            <div class="panel-body">Content</div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Heading</div>
+                            <div class="panel-body">Content</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Heading</div>
+                            <div class="panel-body">Content</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--2nd Row End-->
+
+            </div>
+
+        </div>
+        <!--End of main-container class-->
+
+
+
+
+
+
+
+        <!--Footer Starts-->
+        <footer class="fixed-bottom text-center">
+            <span class="footer-text">Copyright © TMILL</span>
+        </footer>
+        <!--Footer End-->
+    </div>
+    <!--Wrapper End-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <!--Custom JS file-->
+    <script src="js/dashboard.js"></script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

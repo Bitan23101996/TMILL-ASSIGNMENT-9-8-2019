@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Table View</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/dynamicTableView.css" rel="stylesheet"> -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <style>
+        .custom-table {
+            overflow-y: auto;
+            height: 250px;
+        }
+
+        .custom-table table {
+            /*  border-collapse: collapse; */
+            width: 100%;
+
+        }
+
+
+
+        .custom-table thead tr th {
+            /* position: sticky; */
+
+            top: -2px;
+        }
+
+        .custom-table th {
+            /*  background: #eee; */
+            background: #337ab7;
+            padding: 5px 6px;
+            text-align: center;
+            color: #fff;
+
+        }
+
+
+
+        .custom-table td {
+            padding: 5px 6px !important;
+        }
+
+
+
+        .addBtnTop {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .custom-table .addNewBtn {
+            margin-bottom: 12px;
+        }
+
+        .custom-table .saveBtn {
+            display: none;
+            color: #337ab7;
+        }
+
+        .custom-table .cancelNewRowBtn {
+            display: none;
+            color: #337ab7;
+
+        }
+
+        .addBtnTop .addNewBtn {
+
+            background: #337ab7 !important;
+
+        }
+
+
+        .custom-table .cancelExistingRowBtn {
+            display: none;
+            color: #337ab7;
+
+        }
+
+
+        .custom-table .deleteBtn {
+            color: #337ab7;
+        }
+
+        .custom-table .editBtn {
+            color: #337ab7;
+        }
+
+        .custom-table i {
+            margin: 5px;
+            padding: 5px;
+            font-size: 19px;
+        }
+
+
+        .custom-table .inputBox {
+            display: none;
+        }
+
+        .custom-table .noDataFoundTable {
+            font-size: 25px;
+            font-weight: bold;
+            color: red;
+            text-align: center;
+            display: none;
+        }
+
+        .custom-table i {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="dialog-confirm" title="Want to delete?">
+
+    </div>
+
+
+
+    <div class="container-fluid text-right">
+        <div class="addBtnTop">
+            <button type="button" class="btn btn-info addNewBtn">Add New</button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="custom-table">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+
+                            <th width="30%">Col 1</th>
+                            <th width="30%">Col 2</th>
+                            <th width="30%">Col 3</th>
+                            <th width="10%">Action</th>
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="tableData">1</td>
+                            <td class="tableData">2</td>
+                            <td class="tableData">3</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="1"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="2"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="3"></td>
+                            <td>
+
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="tableData">4</td>
+                            <td class="tableData">5</td>
+                            <td class="tableData">6</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="4"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="5"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="6"></td>
+                            <td>
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tableData">7</td>
+                            <td class="tableData">8</td>
+                            <td class="tableData">9</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="7"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="8"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="9"></td>
+                            <td>
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tableData">10</td>
+                            <td class="tableData">11</td>
+                            <td class="tableData">12</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="10"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="11"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="12"></td>
+                            <td>
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tableData">13</td>
+                            <td class="tableData">14</td>
+                            <td class="tableData">15</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="13"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="14"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="15"></td>
+                            <td>
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="tableData">16</td>
+                            <td class="tableData">17</td>
+                            <td class="tableData">18</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="16"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="17"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="18"></td>
+                            <td>
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="tableData">19</td>
+                            <td class="tableData">20</td>
+                            <td class="tableData">21</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="19"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="20"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="21"></td>
+                            <td>
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="tableData">22</td>
+                            <td class="tableData">23</td>
+                            <td class="tableData">24</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="22"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="23"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="24"></td>
+                            <td>
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="tableData">25</td>
+                            <td class="tableData">26</td>
+                            <td class="tableData">27</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="25"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="26"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="27"></td>
+                            <td>
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="tableData">28</td>
+                            <td class="tableData">29</td>
+                            <td class="tableData">30</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="28"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="29"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="30"></td>
+                            <td>
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="tableData">31</td>
+                            <td class="tableData">32</td>
+                            <td class="tableData">33</td>
+
+
+                            <td class="inputBox"><input type="text" class="form-control" value="31"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="32"></td>
+                            <td class="inputBox"><input type="text" class="form-control" value="33"></td>
+                            <td>
+
+                                <i class="fa fa-floppy-o saveBtn" aria-hidden="true" title="Save"
+                                    data-toggle="tooltip"></i>
+
+                                <i class="fa fa-pencil editBtn" aria-hidden="true" title="Edit"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-trash deleteBtn" aria-hidden="true" title="Delete"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelNewRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                                <i class="fa fa-times cancelExistingRowBtn" aria-hidden="true" title="Cancel"
+                                    data-toggle="tooltip"></i>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <!--Added Div if all row is deleted-->
+                <div class="noDataFoundTable"><span>No Data Found</span></div>
+
+            </div>
+        </div>
+        <!--End of FixedTableHeader-->
+    </div>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/dynamicTableView.js"></script> -->
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+
+
+
+            var actions = $("table td:last-child").html();
+
+
+
+            $('.addNewBtn').click(function () {
+
+                $('.addNewBtn').attr("disabled", "disabled");
+                $('.noDataFoundTable').css('display', 'none')
+
+                var rowCount = $('table tbody tr').length;
+                // console.log(rowCount);
+
+
+
+                //When table has no data
+                if (rowCount == 0) {
+
+
+
+                    var index = $("table tbody tr:last-child").index();
+                    //console.log(index)
+
+
+                    var row = '<tr>' +
+                        '<td><input type="text" class="form-control" ></td>' +
+                        '<td><input type="text" class="form-control" ></td>' +
+                        '<td><input type="text" class="form-control"></td>' +
+                        '<td>' + actions + '</td>' +
+                        '</tr>';
+
+                    $("table").append(row);
+
+
+                    $("table tbody tr").eq(index + 1).find(".editBtn").toggle();
+                    $("table tbody tr").eq(index + 1).find(".deleteBtn").toggle();
+                    $("table tbody tr").eq(index + 1).find(".saveBtn").toggle();
+                    // $('.saveBtn').attr("disabled", "disabled");
+                    $("table tbody tr").eq(index + 1).find(".cancelNewRowBtn").toggle();
+
+
+                    //new added cancel new row button
+
+                    $('.cancelNewRowBtn').click(function () {
+                        $(this).closest("tr").remove();
+                        $('.addNewBtn').removeAttr("disabled");
+
+
+                        var rowCount = $('table tbody tr').length;
+                        console.log(rowCount)
+
+
+                        if (rowCount == 0) {
+
+                            console.log("No Data Found")
+                            $('.noDataFoundTable').css('display', 'block')
+
+                        }
+
+                    });
+
+                }
+
+
+
+                //When table has atleast 1 row
+                else if (rowCount > 0) {
+
+
+
+                    //var index = $("table tbody tr:last-child").index();
+
+                    var index = $("table tbody tr:first-child").index();
+                    // console.log(index)
+
+
+
+
+                    var row = '<tr>' +
+                        '<td><input type="text" class="form-control" ></td>' +
+                        '<td><input type="text" class="form-control" ></td>' +
+                        '<td><input type="text" class="form-control"></td>' +
+                        '<td>' + actions + '</td>' +
+                        '</tr>';
+
+                    //$("table").append(row);
+
+                    //row added in the first row
+
+                    $("table tbody tr:first-child").before(row);
+
+
+                    $("table tbody tr").eq(index).find(".editBtn").toggle();
+                    $("table tbody tr").eq(index).find(".deleteBtn").toggle();
+                    $("table tbody tr").eq(index).find(".saveBtn").toggle();
+                    // $('.saveBtn').attr("disabled", "disabled");
+                    $("table tbody tr").eq(index).find(".cancelNewRowBtn").toggle();
+
+
+                    //new added cancel new row button
+
+                    $('.cancelNewRowBtn').click(function () {
+
+                        $(this).closest("tr").remove();
+                        $('.addNewBtn').removeAttr("disabled");
+
+
+
+                        var rowCount = $('table tbody tr').length;
+                        console.log(rowCount)
+
+
+                        if (rowCount == 0) {
+
+                            console.log("No Data Found")
+                            $('.noDataFoundTable').css('display', 'block')
+
+                        }
+
+                    });
+
+
+                } else {
+                    console.log('No condition satisfied')
+                }
+
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //cancel button
+            $('.cancelExistingRowBtn').click(function () {
+
+
+                /*     var input = $(this).closest("tr").find('input[type="text"]');
+        input.each(function () {
+            $(this).closest("td").html($(this).val());
+            //  console.log($(this).val())
+        });
+
+ */
+
+
+                $(this).closest("tr").find(".tableData").show();
+                $(this).closest("tr").find(".inputBox").hide();
+
+
+
+                $(this).closest("tr").find(".saveBtn").hide();
+                $(this).closest("tr").find(".cancelExistingRowBtn").hide();
+                $(this).closest("tr").find(".editBtn").show();
+                $(this).closest("tr").find(".deleteBtn").show();
+
+
+                $(".addBtnTop .addNewBtn").removeAttr("disabled");
+
+
+
+                //toggle
+                /* 
+                        $(this).closest("tr").find(".tableData").toggle();
+                        $(this).closest("tr").find(".inputBox").toggle();
+
+                        $(this).closest("tr").find(".saveBtn").toggle();
+                        $(this).closest("tr").find(".cancelExistingRowBtn").toggle();
+                        $(this).closest("tr").find(".editBtn").toggle();
+                        $(this).closest("tr").find(".deleteBtn").toggle();
+                        $(".addNewBtn").removeAttr("disabled");
+
+                 */
+
+
+
+            });
+
+
+
+            // Edit row on edit button click
+            $('.editBtn').click(function () {
+                /* 
+                          $(this).closest("tr").find("td:not(:last-child)").each(function () {
+                              $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
+                              console.log($(this).text())
+                          });
+                 */
+
+
+                $(this).closest("tr").find(".tableData").hide();
+                $(this).closest("tr").find(".inputBox").show();
+                $(this).closest("tr").find(".editBtn").hide();
+                $(this).closest("tr").find(".deleteBtn").hide();
+                $(this).closest("tr").find(".cancelExistingRowBtn").show();
+                $(this).closest("tr").find(".saveBtn").show();
+
+                $(".addBtnTop .addNewBtn").attr("disabled", "disabled");
+
+
+                //toggle
+                /*     $(this).closest("tr").find(".tableData").toggle();
+        $(this).closest("tr").find(".inputBox").toggle();
+        $(this).closest("tr").find(".editBtn").toggle();
+        $(this).closest("tr").find(".deleteBtn").toggle();
+        $(this).closest("tr").find(".cancelExistingRowBtn").toggle();
+        $(this).closest("tr").find(".saveBtn").toggle();
+
+        $(".addNewBtn").attr("disabled", "disabled");
+
+ */
+
+
+
+
+
+
+
+
+
+
+            });
+
+
+            // Delete row on delete button click
+            $('.deleteBtn').click(function () {
+                var $deleteRow = $(this).closest("tr")
+
+                $("#dialog-confirm").dialog({
+                    resizable: false,
+                    height: "auto",
+                    modal: true,
+                    buttons: {
+                        "Yes": function () {
+                            $deleteRow.remove();
+                            var rowCount = $('table tr').length;
+                            //  console.log(rowCount)
+
+                            if (rowCount == 1) {
+
+                                console.log("No Data Found")
+                                $('.noDataFoundTable').css('display', 'block')
+
+                            }
+                            $(this).dialog("close");
+                        },
+                        "No": function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+
+
+
+
+
+                //$(".add-new").removeAttr("disabled");
+            });
+
+
+
+
+
+
+
+
+            // Save row on Save button click
+            /*   $('.saveBtn').click(function () {
+        var empty = false;
+        var input = $(this).parents("tr").find('input[type="text"]');
+        input.each(function () {
+            if (!$(this).val()) {
+                $(this).addClass("error");
+                empty = true;
+            } else {
+                $(this).removeClass("error");
+            }
+        });
+        $(this).parents("tr").find(".error").first().focus();
+        if (!empty) {
+            input.each(function () {
+                $(this).parent("td").html($(this).val());
+            });
+            $(this).parents("tr").find(".saveBtn").toggle();
+            $(this).parents("tr").find(".cancelBtn").toggle();
+            $(this).parents("tr").find(".editBtn").toggle();
+            $(this).parents("tr").find(".deleteBtn").toggle();
+            $(".addNewBtn").removeAttr("disabled");
+        }
+
+
+
+    });
+ */
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>
